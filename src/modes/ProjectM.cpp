@@ -51,7 +51,7 @@ void ProjectM::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
 
     // Don't override dpad up if it's already pressed using the MX + MY dpad
     // layer.
-    outputs.dpadUp = outputs.dpadUp || inputs.midshield;
+    outputs.dpadLeft = outputs.dpadLeft || inputs.midshield;
 
     if (inputs.select)
         outputs.dpadLeft = true;
@@ -142,8 +142,8 @@ void ProjectM::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
         }
 
         if (directions.diagonal) {
-            outputs.leftStickX = 128 + (directions.x * 28);
-            outputs.leftStickY = 128 + (directions.y * 58);
+            outputs.leftStickX = 128 + (directions.x * 35);
+            outputs.leftStickY = 128 + (directions.y * 70);
 
             if (inputs.b) {
                 outputs.leftStickX = 128 + (directions.x * 28);
